@@ -59,7 +59,7 @@
                         </li>
 
                         <li {{ (Request::is('/') ? 'class="active"' : '') }}>
-                            <a href="{{ url ('') }}"><i class="fa fa-dashboard fa-fw"></i> Item 1</a>
+                            <a href="{{route ('admin.index') }}"><i class="fa fa-home fa-fw"></i>Inicio</a>
                         </li>
                         <li {{ (Request::is('*charts') ? 'class="active"' : '') }}>
                             <a href="{{ url ('') }}"><i class="fa fa-bar-chart-o fa-fw"></i> Item 2</a>
