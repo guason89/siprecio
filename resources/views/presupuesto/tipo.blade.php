@@ -119,7 +119,7 @@
                <img class="img-responsive" width="100%" src="{{asset('img/base.png')}}">    
             </div>            
             <div class="col-md-4 input-group" style="margin-top: 150px;">
-               <input type="text" id="tablas" class="form-control">              
+               <input type="text" id="tablas" class="form-control" onkeypress="return valida(event)">              
                <div onclick='calcularPresupuesto(45*$("#tablas").val(),4);' class="input-group-addon"> Siguiente</div>             
             </div>
             <div class="col-md-2"></div>       
@@ -173,7 +173,7 @@
             <div class="col-md-8">
                 <label>Ingrese el numero de servicios web que tendrá</label>                
                 <div class="col-md-4 input-group">
-                   <input type="text" id="serviciosweb" class="form-control">              
+                   <input type="text" id="serviciosweb" class="form-control" onkeypress="return valida(event)">              
                    <div onclick='calcularPresupuesto(50*$("#serviciosweb").val(),6);' class="input-group-addon"> Siguiente</div>             
                 </div>             
             </div>     
@@ -252,6 +252,20 @@ function siguienteEtapa(suma){
     $("#tipoapp").val(tipo);
     $("#presupuestoini").val(presupuesto);
     $("#seguirProcesoDos").trigger('click');
+}
+
+function valida(e){
+    tecla = (document.all) ? e.keyCode : e.which;
+
+    //Tecla de retroceso para borrar, siempre la permite
+    if (tecla==8){
+        return true;
+    }
+        
+    // Patron de entrada, en este caso solo acepta numeros
+    patron =/[0-9]/;
+    tecla_final = String.fromCharCode(tecla);
+    return patron.test(tecla_final);
 }
 </script>
 @endsection
