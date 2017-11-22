@@ -56,6 +56,9 @@
                         <li {{ (Request::is('/') ? 'class="active"' : '') }}>
                             <a href="{{route ('admin.index') }}"><i class="fa fa-home fa-fw"></i>Inicio</a>
                         </li>
+                        <li>
+                            <a href="{{route ('usuarios') }}"><i class="fa fa-users fa-fw"></i>Usuarios</a>
+                        </li>
                     </ul>
                     @endif
                 </div>

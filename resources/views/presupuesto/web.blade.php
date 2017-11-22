@@ -181,8 +181,8 @@ function calcularPresupuesto(suma,pregunta){
         $("#prg"+siguiente).show();
     }
     else
-    {
-        alertify.alert("PRESUPUESTO CALCULADO","<strong><H1 class='text-justify'>El presupuesto de su aplicación es : <br>$"+presupuesto+"</H1></strong>",function(){               
+    {       
+        alertify.alert("PRESUPUESTO CALCULADO","<strong><p class='text-justify'>El presupuesto tentativo de su aplicación es : <br> <h1>$"+presupuesto+"</h1></p></strong>",function(){               
                 window.location.href = "{{route('admin.index')}}";
         });
     }   

@@ -31,5 +31,10 @@ class PrecioController extends Controller
         }
         
     }
+
+    public function Usuarios()
+    {
+        return view('presupuesto.usuarios');
+    }
     
 }

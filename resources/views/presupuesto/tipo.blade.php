@@ -14,8 +14,10 @@
 @endsection
 
 @section('section')
-<div id="tipo">
-    <h2 class="bg-info text-center">¿Qué tipo de aplicación desea desarrollar?</h2>
+<div class="panel panel-success" id="tipo">    
+    <div class="panel-heading">
+        <h3 class="panel-title text-center">¿Qué tipo de aplicación desea desarrollar?</h3>    
+    </div>
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-4">
@@ -181,18 +183,19 @@
     </div>
 </div>
 <div class="panel panel-success" id="prg7" style="display: none;">
+    <div class="panel-heading">
+        <h3 class="panel-title text-center">En la escala del UNO al CUATRO ¿qué tan rentable considera que es esta aplicación?</h3>    
+    </div>
     <form action="{{route('presupuesto.etapa.dos')}}" method="POST" class="form form-vertical" role="form" id="presupuestouno" >
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <input type="hidden" name="presupuestoini" id="presupuestoini" value="">
         <input type="hidden" name="tipoapp" id="tipoapp" value="">
-        <div class="panel-heading">
-            <h3 class="panel-title text-center">En la escala del uno al 4 ¿qué tan rentable considera que es esta aplicación?</h3>    
-        </div>
+        
         <div class="panel-body">
             <div class="row">
                 <div class="col-md-2"></div>
                 <div class="col-md-8">
-                   <label>Siendo uno poco rentable y 4 Muy rentable</label>  
+                   <label>Siendo UNO poco rentable y CUATRO Muy rentable</label>  
                 </div>            
                 <div class="col-md-2"></div>       
             </div>
@@ -200,10 +203,10 @@
 
             <div class="row">
                 <div class="col-md-2"></div>
-                <a style="margin: 5px;" class="col-md-2 btn btn-danger" onclick="siguienteEtapa(100);">Uno</a>
-                <a style="margin: 5px;" class="col-md-2 btn btn-warning" onclick="siguienteEtapa(200);">Dos</a>
-                <a style="margin: 5px;" class="col-md-2 btn btn-primary" onclick="siguienteEtapa(400);">Tres</a>
-                <a style="margin: 5px;" class="col-md-2 btn btn-success" onclick="siguienteEtapa(800);">Cuatro</a>          
+                <a style="margin: 5px;" class="col-md-2 btn btn-danger" onclick="siguienteEtapa(100);">UNO</a>
+                <a style="margin: 5px;" class="col-md-2 btn btn-warning" onclick="siguienteEtapa(200);">DOS</a>
+                <a style="margin: 5px;" class="col-md-2 btn btn-primary" onclick="siguienteEtapa(400);">TRES</a>
+                <a style="margin: 5px;" class="col-md-2 btn btn-success" onclick="siguienteEtapa(800);">CUATRO</a>          
             </div>
         </div>
         <button type="submit" style="display: none;" id="seguirProcesoDos">SiguienteEtapa</button>

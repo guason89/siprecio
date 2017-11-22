@@ -70,6 +70,8 @@ a{
 	<div class="col-md-4"><a href="{{route('presupuesto.tipo')}}" class="button text-uppercase js--start fonts-loaded">Empezar</a></div>
 	<div class="col-md-4"></div>	
 </div>
+
+
 @endif
 
 @endsection

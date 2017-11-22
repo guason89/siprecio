@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 	<meta charset="utf-8">
-	<title>@yield('title', 'default') | Panel de Administración</title>
+	<title>@yield('title', 'sipresupuesto')</title>
 	<link rel="stylesheet" href="{{ asset("assets/stylesheets/styles.css") }}" />
 
 	{!! Html::style('plugins/alertifyjs/css/alertify.min.css') !!} 
