@@ -20,7 +20,7 @@
 				</div>
 			</div>
 			<div class="col-md-6">
-				<p>CALIFICACIÓN POCO RENTABLE</p>
+				<p>CALIFICACIÓN MALA</p>
 			</div>
 		</div>
 		<div class="col-md-6">
@@ -33,7 +33,7 @@
 				</div>
 			</div>
 			<div class="col-md-6">
-				<p>CALIFICACIÓN MEDIANAMENTE RENTABLE</p>
+				<p>CALIFICACIÓN REGULAR</p>
 			</div>
 		</div>
 	</div>
@@ -48,7 +48,7 @@
 				</div>
 			</div>
 			<div class="col-md-6">
-				<p>CALIFICACIÓN RENTABLE</p>
+				<p>CALIFICACIÓN BUENA</p>
 			</div>
 		</div>
 		<div class="col-md-6">
@@ -61,7 +61,7 @@
 				</div>
 			</div>
 			<div class="col-md-6">
-				<p>CALIFICACIÓN MUY RENTABLE</p>
+				<p>CALIFICACIÓN EXCELENTE</p>
 			</div>
 		</div>
 	</div>	
