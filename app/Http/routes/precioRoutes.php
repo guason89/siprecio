@@ -7,7 +7,8 @@ Route::group(['prefix'=>'presupuesto'], function(){
 
 	Route::get('/usuarios',['as'=>'usuarios', 'uses'=>'PrecioController@Usuarios']);
 
-
+	Route::get('/calificar',['as'=>'calificarSitio', 'uses'=>'PrecioController@calificarSitio']);
+	Route::post('/calificarSitio',['as'=>'save.calificacion.sitio', 'uses'=>'PrecioController@saveCalificarSitio']);
 });
 	
 

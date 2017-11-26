@@ -31,6 +31,10 @@
                     <ul class="dropdown-menu dropdown-user">
                         <li><a href="{{ route('admin.auth.logout') }}"><i class="fa fa-sign-out fa-fw"></i> Salir</a>
                         </li>
+                        @if(Auth::user()->type=='member')
+                        <li><a href="{{ route('usarioMember.edit',[\Auth::user()->id]) }}"><i class="fa fa-pencil fa-fw"></i>Editar Perfil</a>
+                        </li>
+                        @endif
                     </ul>
                     <!-- /.dropdown-user -->
                 </li>
@@ -57,8 +61,17 @@
                             <a href="{{route ('admin.index') }}"><i class="fa fa-home fa-fw"></i>Inicio</a>
                         </li>
                         <li>
-                            <a href="{{route ('usuarios') }}"><i class="fa fa-users fa-fw"></i>Usuarios</a>
+                            <a href="{{route ('usuarios') }}"><i class="fa fa-sun-o fa-fw"></i>Opinión de suarios</a>
                         </li>
+                        @if(Auth::user()->type=='member')
+                        <li>
+                            <a href="{{route ('calificarSitio') }}"><i class="fa fa-star-half-o fa-fw"></i>Calificar el sitio</a>
+                        </li>
+                        @else
+                        <li>
+                            <a href="{{route ('admin.users.index') }}"><i class="fa fa-users fa-fw"></i>Usuarios</a>
+                        </li>
+                        @endif
                     </ul>
                     @endif
                 </div>

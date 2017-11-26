@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\User;
+use Auth;
 use Laracasts\Flash\Flash;
 use App\Http\Requests\UserRequest;
 
@@ -74,6 +75,12 @@ class UsersController extends Controller
         return view('admin.users.edit')->with('user', $user);
     }
 
+    public function editarMember($id)
+    {
+        $user = User::find($id);
+        return view('admin.users.editarMember')->with('user', $user);
+    }
+
     /**
      * Update the specified resource in storage.
      *
@@ -87,8 +94,18 @@ class UsersController extends Controller
         $user->fill($request->all());
         $user->save();
 
-        Flash::warning('EL usuario '. $user->name . ' a sido Editado');
-        return redirect()->route('admin.users.index');
+        if(Auth::user()->type=='admin')
+        {
+           Flash::warning('EL usuario '. $user->name . ' a sido Editado');
+            return redirect()->route('admin.users.index'); 
+        }
+        elseif(Auth::user()->type=='member')
+        {
+            Flash::warning('EL usuario '. $user->name . ' a sido Editado');
+            return redirect()->route('admin.index');
+        }
+
+        
     }
 
     /**

@@ -27,6 +27,11 @@ Route::group(['prefix'=>'admin'], function(){
 		'as'	=>	'admin.users.destroy'
 		]);
 
+	Route::get('usuario/editarMember/{id}', [
+		'uses'	=>	'UsersController@editarMember',
+		'as'	=>	'usarioMember.edit'
+		]);
+
 });
 	
 
